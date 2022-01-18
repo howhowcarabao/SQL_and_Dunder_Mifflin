@@ -3,7 +3,6 @@
 --------------------------------
 
 --Author: Carlos Vasquez
---Date: 16/01/2022 
 --Tool used: BigQuery
 
 ---- Basic Queries

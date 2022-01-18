@@ -131,10 +131,10 @@ Preview
 ## Answers
 
 -- SQL queries via BigQuery
-1. Basic Queries
-2. Functions
-3. Joins
-4. Unios
-5. Nested Queries
+1. [Basic Queries](https://github.com/howhowcarabao/SQL_and_Dunder_Mifflin/blob/master/solutions/solutions_basic.md)
+2. [Functions](https://github.com/howhowcarabao/SQL_and_Dunder_Mifflin/blob/master/solutions/solutions_functions.md)
+3. [Joins](https://github.com/howhowcarabao/SQL_and_Dunder_Mifflin/blob/master/solutions/solutions_joins.md)
+4. [Unions](https://github.com/howhowcarabao/SQL_and_Dunder_Mifflin/blob/master/solutions/solutions_unions.md)
+5. [Nested Queries](https://github.com/howhowcarabao/SQL_and_Dunder_Mifflin/blob/master/solutions/solutions_nested_queries.md)
 
 ***

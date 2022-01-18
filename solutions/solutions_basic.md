@@ -1,16 +1,13 @@
+## Dunder Mifflin -- Query solutions
 --------------------------------
-## Dunder Mifflin--Query solutions
---------------------------------
-
 Author: Carlos Vasquez
 
-Date: 16/01/2022 
-
 Tool used: BigQuery
+--------------------------------
 
 Basic Queries
 
- -- Find ALL employees
+ ## 1. Find ALL employees
 ````sql
 SELECT
   *
@@ -33,7 +30,7 @@ FROM
 
 ***
 
--- Find all clients
+## 2. Find all clients
 ````sql
 SELECT
   *
@@ -52,7 +49,7 @@ FROM
 |403|	John Daly Law LLC|	3|
 |405|	Times Newspaper|	3|
 
--- Find all employees ordered by salary (ASC)
+## 3. Find all employees ordered by salary (ASC)
 ````sql
 SELECT
   *
@@ -75,7 +72,7 @@ ORDER BY
 |101|	Jan|	Levinson|	1961-05-11|	F|	110000|	100|	1|
 |100|	David|	Wallace|	1967-11-17|	M|	250000|		NULL| 1|
 
--- Find all employees ordered by salary (DESC)
+## 4. Find all employees ordered by salary (DESC)
 ````sql
 SELECT
   *
@@ -98,7 +95,7 @@ ORDER BY
 |103|	Angela|	Martin|	1971-06-25|	F|	63000|	102|	2|
 |104|	Kelly|	Kapoor|	1980-02-05|	F|	55000|	102|	2|
 
--- Find all employees ordered by sex then name
+## 5. Find all employees ordered by sex then name
 ````sql
 SELECT
   *
@@ -123,7 +120,7 @@ ORDER BY
 |105|	Stanley|	Hudson|	1958-02-19|	M|	69000|	102|	2|
 
 
--- Find the first 5 employees in the table
+## 6. Find the first 5 employees in the table
 ````sql
 SELECT
   *
@@ -141,7 +138,7 @@ LIMIT 5
 |103|	Angela|	Martin|	1971-06-25|	F|	63000|	102|	2|
 |104|	Kelly|	Kapoor|	1980-02-05|	F|	55000|	102|	2|
 
--- Find the first and last names of all employees
+## 7. Find the first and last names of all employees
 ````sql
 SELECT
   first_name,
@@ -164,7 +161,7 @@ FROM
 |Jim|	Halpert|
 
 
--- Find the forename and surnames names of all employees
+## 8. Find the forename and surnames names of all employees
 ````sql
 SELECT
   first_name AS forename,
@@ -186,7 +183,7 @@ FROM
 |Andy|	Bernard|
 |Jim|	Halpert|
 
--- Find out all the different genders
+## 9. Find out all the different genders
 ````sql
 SELECT
   DISTINCT(sex)
@@ -200,7 +197,7 @@ FROM
 |M|
 |F|
 
--- Find all male employees
+## 9. Find all male employees
 ````sql
 SELECT
   first_name,
@@ -220,7 +217,7 @@ WHERE
 |Andy|	Bernard|
 |Jim|	Halpert|
 
--- Find all employees at branch 2
+## 10. Find all employees at branch 2
 ````sql
 SELECT
   *
@@ -238,7 +235,7 @@ WHERE
 |104|	Kelly|	Kapoor|	1980-02-05|	F|	55000|	102|	2|
 |105|	Stanley|	Hudson|	1958-02-19|	M|	69000|	102|	2|
 
--- Find all employee's id's and names who were born after 1969
+## 11. Find all employee's id's and names who were born after 1969
 ````sql
 SELECT
   emp_id,
@@ -259,7 +256,7 @@ WHERE
 |Jim|	Halpert|
 
 
--- Find all female employees at branch 2
+## 12. Find all female employees at branch 2
 ````sql
 SELECT
   *
@@ -275,7 +272,7 @@ WHERE
 |103|	Angela|	Martin|	1971-06-25|	F|	63000|	102|	2|
 |104|	Kelly|	Kapoor|	1980-02-05|	F|	55000|	102|	2|
 
--- Find all employees who are female & born after 1969 or who make over 80000
+## 13. Find all employees who are female & born after 1969 or who make over 80000
 ````sql
 SELECT
   *
@@ -292,13 +289,15 @@ sex = 'F' AND birth_day >= '1970-01-01'OR sex = 'F' AND salary > 80000
 |103|	Angela|	Martin|	1971-06-25|	F|	63000|	102|	2|
 |104|	Kelly|	Kapoor|	1980-02-05|	F|	55000|	102|	2|
 
--- Find all employees born between 1970 and 1975
+## 14. Find all employees born between 1970 and 1975
+```sql
 SELECT
   *
 FROM
   `my-data-project-11097972.Dunder_Mifflin.employee`
 WHERE
   birth_day BETWEEN '1970-01-01' AND '1975-01-01'
+```
   
 #### Results:
 |emp_id|	first_name|	last_name|	birth_day|	sex|	salary|	super_id|	branch_id|
@@ -306,7 +305,7 @@ WHERE
 |103|	Angela|	Martin|	1971-06-25|	F|	63000|	102|	2|
 |107|	Andy|	Bernard|	1973-07-22|	M|	65000|	106|	3|
 
--- Find all employees named Jim, Michael, Johnny or David
+## 15. Find all employees named Jim, Michael, Johnny or David
 ````sql
 SELECT
   *
